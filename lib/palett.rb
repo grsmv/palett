@@ -45,28 +45,3 @@ class Object
     EOM
   end  
 end
-
-## USAGE 
-
-#puts 'Red '.red.black_background << 'Magenta '.magenta.blue_background << 'White '.white.black_background.bold.underline
-
-#white do
-#  blue_background do
-#    puts ( 'a'..'z' ).map { |l| l }.join(', ')
-#  end
-#end
-
-bold do
-  red do
-    white_background do
-
-      puts ".\n\n"
-
-      puts File.open('/home/sergey/Desktop/day.gem/README.md').read
-
-      puts "-" * 50
-
-      puts "\n\n."
-    end
-  end
-end
