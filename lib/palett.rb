@@ -1,7 +1,7 @@
 require 'stringio'
 
 module Kernel
-  def color text, code
+  def palette_color text, code
     "\e[#{code}m#{text}\e[0m"
   end
 end
@@ -20,7 +20,7 @@ module Palett
 
   ANSI_PROPERTIES.each do |code, name|
     define_method name do
-      color self, code
+      palette_color self, code
     end
   end
 end
@@ -43,5 +43,5 @@ class Object
         puts sio.string.strip.#{name}
       end
     EOM
-  end  
+  end
 end
